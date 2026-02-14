@@ -1,0 +1,50 @@
+def strlen(str):
+counter = 0
+while str[counter:]:
+counter += 1
+return counter
+
+def strrev(str):
+rstr=&amp;quot;&amp;quot;
+l=strlen(str)
+while l&amp;gt;0:
+rstr = rstr + str[l-1]
+l=l-1
+return rstr
+
+def strcat(st1,st2):
+return(st1+st2)
+
+def strcmp(st1,st2):
+if(st1==st2):
+print(st1 + &amp;quot; and &amp;quot; + st2 + &amp;quot; are same&amp;quot;)
+elif (st1&amp;gt;st2):
+print(st1 + &amp;quot; comes after &amp;quot; + st2 +&amp;quot; in the Dictionary&amp;quot;)
+
+else:
+print(st1 + &amp;quot; comes before &amp;quot; + st2 +&amp;quot; in the Dictionary&amp;quot;)
+print(&amp;quot;String Functions:\n 1. String Length \n 2. String Reverse \n 3. String
+Concatenation\n
+4. String Comparison\n 5. Exit\n&amp;quot;)
+while(1):
+n=int(input(&amp;quot;Enter your Choice: &amp;quot;))
+if(n==1):
+str = input(&amp;quot;Enter a String: &amp;quot;)
+print(&amp;quot;Length of the string is:&amp;quot;,strlen(str))
+elif (n==2):
+str = input(&amp;quot;Enter a String: &amp;quot;)
+print(&amp;quot;Reversed String is:&amp;quot;, strrev(str))
+elif (n==3):
+str1 = input(&amp;quot;Enter the first String: &amp;quot;)
+str2 = input(&amp;quot;Enter the second String: &amp;quot;)
+print(&amp;quot;Concatenated string is:&amp;quot;, strcat(str1,str2))
+elif (n==4):
+str1 = input(&amp;quot;Enter the first String: &amp;quot;)
+str2 = input(&amp;quot;Enter the second String: &amp;quot;)
+strcmp(str1,str2)
+elif (n==5):
+print(&amp;quot;Exited&amp;quot;)
+break
+else:
+
+print(&amp;quot;Invalid Choice&amp;quot;)
